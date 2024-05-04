@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <info>
+    <name>Ratfolk</name>
+    <update version="0.0.1">
+      <file name="race-ratfolk.xml" url="TODO" />
+    </update>
+  </info>
+  <element name="Ratfolk" type="Race" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACE_RATFOLK">
+    <description>
+      <p class="flavor">Criado exclusivamente para a campanha de Gustavo Raio. Para ser utilizado pelo personagem de Millena Schulz Moreira.</p>
+      <h4>RATFOLK TRAITS</h4>
+      <p>Your ratfolk character has the following racial traits.</p>
+      <p>
+        <span class="feature">Ability Score Increase.</span>Your Dexterity score increases by 2, and your Charisma score increases by 1.<br />
+        <span class="feature">Age.</span>Unknown.<br />
+        <span class="feature">Alignment.</span>Unknown.<br />
+        <span class="feature">Size.</span>Ratfolks range from under 6 to over 11 inches tall and have slender builds. Your size is Tiny.<br />
+        <span class="feature">Speed.</span>Your base walking speed is 25 feet.<br />
+        <span class="feature">Darkvision.</span>You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.<br />
+        <span class="feature">Rodents Agility.</span>Your reflexes and agility allow you to move with a burst of speed. When you move on your turn in combat, you can double your speed until the end of the turn. Once you use this trait, you can’t use it again until you move 0 feet on one of your turns.<br />
+        <span class="feature">Rat’s Size.</span>Because of your tiny size. You have advantage on Dexterity (Acrobatics) checks, but disadvantage on all Strength saving throws.<br />
+        <span class="feature">Rat’s Talent.</span>You have proficiency in the Stealth skill.<br />
+        <span class="feature">Poison Immunity.</span>You are immune to poison damage and the poisoned condition.<br />
+        <span class="feature">Languages.</span>You can speak, read, and write Common and one other language of your choice.<br />
+      </p>
+    </description>
+    <sheet display="false" />
+    <setters>
+      <set name="names" type="male">Cloud on the Mountaintop, Five Timber, Jade Shoe, Left-Handed Hummingbird, Seven Thundercloud, Skirt of Snakes, Smoking Mirror</set>
+      <set name="names" type="clan">Bright Cliffs, Distant Rain, Mountain Tree, Rumbling River, Snoring Mountain</set>
+      <set name="names-format">{{name}}</set>
+      <set name="height" modifier="2d12">4’8"</set>
+      <set name="weight" modifier="2d4">100 lb.</set>
+    </setters>
+    <rules>
+      <stat name="dexterity" value="2" />
+      <stat name="charisma" value="1" />
+      <stat name="innate speed" value="25" bonus="base" />
+      <grant type="Vision" id="ID_VISION_DARKVISION" />
+      <grant type="Size" id="ID_SIZE_TINY" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <select type="Language" name="Language (Ratfolk)" supports="Standard||Exotic" />
+      <grant type="Racial Trait" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_RODENTS_AGILITY" />
+      <grant type="Racial Trait" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_RATS_SIZE" />
+      <grant type="Racial Trait" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_RATS_TALENT" />
+      <grant type="Racial Trait" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_POISON_IMMUNITY" />
+    </rules>
+  </element>
+  <element name="Rodents Agility" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_RODENTS_AGILITY">
+    <description>
+      <p>When you move on your turn in combat, you can double your speed until the end of the turn. Once you use this trait, you can’t use it again until you move 0 feet on one of your turns.</p>
+    </description>
+    <sheet>
+      <description>When you move on your turn in combat, you can double your speed until the end of the turn. Once you use this trait, you can’t use it again until you move 0 feet on one of your turns.</description>
+    </sheet>
+  </element>
+  <element name="Rat’s Size" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_RATS_SIZE">
+    <description>
+      <p>You have advantage on Dexterity (Acrobatics) checks, but disadvantage on all Strength saving throws.</p>
+    </description>
+    <sheet>
+      <description>You have advantage on Dexterity (Acrobatics) checks, but disadvantage on all Strength saving throws.</description>
+    </sheet>
+  </element>
+  <element name="Rat’s Talent" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_RATS_TALENT">
+    <description>
+      <p>You have proficiency in the Stealth skill.</p>
+    </description>
+    <sheet display="false">
+      <description>You have proficiency in the Stealth skill.</description>
+    </sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+    </rules>
+  </element>
+  <element name="Poison Immunity" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_RATFOLK_POISON_IMMUNITY">
+    <description>
+      <p>You are immune to poison damage and the poisoned condition.</p>
+    </description>
+    <sheet>
+      <description>You are immune to poison damage and the poisoned condition.</description>
+    </sheet>
+    <rules>
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_POISON" />
+    </rules>
+  </element>
+</elements>
