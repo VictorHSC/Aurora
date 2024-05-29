@@ -3,13 +3,13 @@
 	<info>
 		<name>Vitão’s Guide to Monsters</name>
 		<author>Victor Hugo da Silva Crispim</author>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="vitao-guide-to-monsters.index" url="https://raw.githubusercontent.com/VictorHSC/Aurora/main/vitao.index" />
 		</update>
 	</info>
 	<files>
-		<file name="source.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/supplements/volos-guide-to-monsters/source.xml" />
-		<!-- races -->		
+		<!-- races -->
 		<file name="race-ratfolk.xml" url="https://raw.githubusercontent.com/VictorHSC/Aurora/main/race-ratfolk.xml" />
+		<file name="jerbeen.xml" url="https://raw.githubusercontent.com/VictorHSC/Aurora/main/jerbeen.xml" />
 	</files>
 </index>
