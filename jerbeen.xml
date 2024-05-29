@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name>Jerbeen</name>
-        <update version="0.0.1">
+        <update version="0.2.1">
             <file name="jerbeen.xml" url="https://raw.githubusercontent.com/VictorHSC/Aurora/main/jerbeen.xml" />
         </update>
     </info>
@@ -11,12 +11,10 @@
             <p class="flavor">Jerbeens are small mouse-like folk with long, furred tails that help them balance. In proportion to the rest of their body, a jerbeen’s legs are long and powerful. Jerbeens can be found in a variety of places across the Wood, usually forming their own communities within birdfolk perches and humblefolk villages. Seldom do they live alone. A jerbeen’s home can contain several generations, including extended family and cousins living together under one roof. Jerbeens have a strong sense of family and like to surround themselves with good company wherever they rest.</p>
 
             <h4>Outsize Courage</h4>
-            <p>Jerbeens are the smallest inhabitants of Humblewood, dwarfed by nearly every kind of creature they encounter. While they are quick and nimble, and possess an affable attitude, they are not very strong, brave, or powerful on their own.</p>
-            <p class="indent">When they stand with a group, jerbeens are emboldened: the presence of others reassures them, granting them the courage to face even the largest threats head on. They excel in team strategies, helping one another solve problems that could not be surmounted alone.</p>
+            <p>Jerbeens are the smallest inhabitants of Humblewood, dwarfed by nearly every kind of creature they encounter. While they are quick and nimble, and possess an affable attitude, they are not very strong, brave, or powerful on their own. When they stand with a group, jerbeens are emboldened: the presence of others reassures them, granting them the courage to face even the largest threats head on. They excel in team strategies, helping one another solve problems that could not be surmounted alone.</p>
 
             <h4>Community First</h4>
-            <p>The communal slant of jerbeens stems from more than just their love of good company: jerbeen are kind and considerate creatures, known for their joviality and charm. Being small and not particularly strong gives them a perspective that allows them to easily empathize with others, though not all jerbeens share this compassionate outlook. Some respond to the dangers outside their community by becoming insular and fearing all non-jerbeens.</p>
-            <p class="indent">Jerbeens value privacy, but true isolation from friends, families, or loved ones is considered to be the worst possible fate a jerbeen could suffer.</p>
+            <p>The communal slant of jerbeens stems from more than just their love of good company: jerbeen are kind and considerate creatures, known for their joviality and charm. Being small and not particularly strong gives them a perspective that allows them to easily empathize with others, though not all jerbeens share this compassionate outlook. Some respond to the dangers outside their community by becoming insular and fearing all non-jerbeens. Jerbeens value privacy, but true isolation from friends, families, or loved ones is considered to be the worst possible fate a jerbeen could suffer.</p>
 
             <h4>JERBEEN TRAITS</h4>
             <p>Your jerbeen character has the following racial traits.</p>
@@ -34,6 +32,14 @@
             </p>
         </description>
         <sheet display="false" />
+        <setters>
+            <set name="names" type="male">Acorn, Finn, Perrin, Reed, Soren, Tommo</set>
+            <set name="names" type="female">Astra, Bree, Daisy, Ivy, Moira, Verna</set>
+            <set name="names" type="surname">Brightpearl, Cottonwood, Frostberry, Rivershine, Summerglow, Tealeaf, Twinklenose</set>
+            <set name="names-format">{{name}} {{surname}}</set>
+            <set name="height" modifier="2d4">2'4"</set>
+            <set name="weight" modifier="2d2">20 lb.</set>
+        </setters>
         <rules>
             <stat name="dexterity" value="2" />
             <stat name="charisma" value="1" />
@@ -47,6 +53,7 @@
             <grant type="Racial Trait" id="ID_VITAO_RACIAL_TRAIT_JERBEEN_TEAM_TACTICS" />
         </rules>
     </element>
+
     <element name="Standing Leap" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_JERBEEN_STANDING_LEAP">
         <description>
             <p>Your base long jump is 30 feet, and your base high jump is 15 feet, with or without a running start.</p>
@@ -55,6 +62,7 @@
             <description>Your base long jump is 30 feet, and your base high jump is 15 feet, with or without a running start.</description>
         </sheet>
     </element>
+
     <element name="Nimbleness" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_JERBEEN_NIMBLENESS">
         <description>
             <p>You can move through the space of any creature that is of a size larger than yours.</p>
@@ -63,6 +71,7 @@
             <description>You can move through the space of any creature that is of a size larger than yours.</description>
         </sheet>
     </element>
+
     <element name="Take Heart" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_JERBEEN_TAKE_HEART">
         <description>
             <p>You have advantage on Strength saving throws and saving throws against being frightened as long as you are within 5 feet of an ally who isn’t frightened or incapacitated that you can both see and hear.</p>
@@ -71,6 +80,7 @@
             <description>You have advantage on Strength saving throws and saving throws against being frightened as long as you are within 5 feet of an ally who isn’t frightened or incapacitated that you can both see and hear.</description>
         </sheet>
     </element>
+
     <element name="Team Tactics" type="Racial Trait" source="Vitão’s Guide to Monsters" id="ID_VITAO_RACIAL_TRAIT_JERBEEN_TEAM_TACTICS">
         <description>
             <p>You can use the Help action as a bonus action.</p>
